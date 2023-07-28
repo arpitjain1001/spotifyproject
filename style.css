@@ -1,5 +1,5 @@
 body {
-    background-color: blue;
+    background-color: yellow;
 }
 
 * {
@@ -20,6 +20,12 @@ nav ul {
     color: white;
     align-items: center;/*mtlb home or about upar or neeche se ekdam middle mae aa jae*/
     margin: 1px ;
+    font-weight: bold;
+    font-size: large;
+}
+
+form{
+    margin-left:1000px;
 }
 
 .container {

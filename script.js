@@ -6,6 +6,7 @@ let myprogressbar = document.getElementById('myprogressbar');
 let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
 let songitems = Array.from(document.getElementsByClassName('songitem'));
+let search = document.getElementsByClassName('search')
 
 
 let songs = [
@@ -77,6 +78,13 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element) =>
         masterplay.classList.add("fa-pause-circle");
     })
 })
+document.getElementsByClassName('search').addEventListener('search', () => {
+    console.log("chl rah ah")
+    if(Q(songname__icontains = search)){
+    
+    }
+})
+    
 document.getElementById('next').addEventListener('click', () => {
     if (songindex >= 5) {
         songindex = 0;
