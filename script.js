@@ -25,6 +25,7 @@ songitems.forEach((element , i)=>{
 
 masterplay.addEventListener('click', ()=>{
     /*ya toh audio element paused h || ya audio element start hi nhi  hua h*/
+    console.log('chal raha hai');
     if(audioelement.paused || audioelement.currentTime <= 0){   
        audioelement.play();/*agr audio element play nhi ho raha toh usko play krdo */
 
