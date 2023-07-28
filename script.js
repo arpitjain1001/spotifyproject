@@ -25,7 +25,7 @@ songitems.forEach((element , i)=>{
 
 masterplay.addEventListener('click', ()=>{
     /*ya toh audio element paused h || ya audio element start hi nhi  hua h*/
-    console.log('chal raha hai');
+    // console.log('chal raha hai');
     if(audioelement.paused || audioelement.currentTime <= 0){   
        audioelement.play();/*agr audio element play nhi ho raha toh usko play krdo */
 
@@ -41,16 +41,19 @@ masterplay.addEventListener('click', ()=>{
         gif.style.opacity = 0;
     }
 })
-audioelement.addEventListener('timeupdate', () => {
-    console.log('timeupdate');
+audioelement.addEventListener('timeupdate', ()=>{
+    // console.log('timeupdate');
     progress = parseInt((audioelement.currentTime / audioelement.duration) * 100) /*  P=(CT/DU)X100  */
     myprogressbar.value = progress;
+
 })
-myprogressbar.addEventListener('change', () => {
+myprogressbar.addEventListener('change', ()=>{
+    // console.log("chl raha hai");
     audioelement.currentTime = myprogressbar.value * audioelement.duration / 100; /*  CT=P*DU/100     */
 
 })
 const makeAllPlays = () => {
+
     Array.from(document.getElementsByClassName('songitemplay')).forEach((element) => {
         element.classList.remove('fa-pause-circle');
         element.classList.add('fa-play-circle');
@@ -65,7 +68,7 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element) =>
         songindex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioelement.src = `songs/${songindex}.mp3`;
+        audioelement.src = `songs/${songindex+1}.mp3`;
         masterSongName.innerText = songs[songindex].songname;
         audioelement.currentTime = 0;
         audioelement.play();
@@ -81,7 +84,7 @@ document.getElementById('next').addEventListener('click', () => {
     else {
         songindex += 1;
     }
-    audioelement.src = `songs/${songindex}.mp3`;
+    audioelement.src = `songs/${songindex+1}.mp3`;
     masterSongName.innerText = songs[songindex].songname;
     audioelement.currentTime = 0;
     audioelement.play();
@@ -90,13 +93,13 @@ document.getElementById('next').addEventListener('click', () => {
     masterplay.classList.add("fa-pause-circle");
 })
 document.getElementById('previous').addEventListener('click', () => {
-    if (songindex <=5) {
+    if (songindex <=0) {
         songindex = 0;
     }
     else {
         songindex -= 1;
     }
-    audioelement.src = `songs/${songindex}.mp3`;
+    audioelement.src = `songs/${songindex+1}.mp3`;
     masterSongName.innerText = songs[songindex].songname;
     audioelement.currentTime = 0;
     audioelement.play();
