@@ -30,13 +30,12 @@ form{
 
 .container {
     /**/
-    min-height: 55vh;/*neeche black vaala box sa h uske liye h yeh*/
-    color: black;
+    min-height: 55vh;/*yeh singer ki image ki size ke liye h yeh*/
+    color: black;/*yeh best songs vaale ke liye h yeh*/
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     margin: 23px auto;
     width: 70%;
-    background-color: black;
     border-radius: 12px;
     padding: 40px;
     background-image: url("img.jpg");
@@ -50,27 +49,27 @@ nav ul li {
 }
 
 .brand img {
-    width: 84px;
+    width: 84px; /*yeh spotify ke logo ke liye h yeh*/
 
 }
 
 .bottom {
     /*yeh neeche box h uske liye h yeh vaala part*/
     /* position: sticky; */
-    height: 130px;
+    height: 130px; /* neeche vaala box ki height h yeh */
     background-color: black;
     color: white;
-    bottom: 0px;
+    bottom: 0px;/*mtlb neeche vaala box neeche aa jae*/
     display: flex;
-    justify-content: center;
+    justify-content: center;  /*myprogressbar vaala center mae aa jae*/
     flex-direction: column;
-    align-items: center;
+    align-items: center;/*yeh play previous next center mae rhe*/
     padding: 10px 15px;
 
 }
 
 .icons {
-    margin-top: 14px;
+    margin-top: 14px;/*icons or myprogressbar vaale mae distance aa jae*/
     
 }
 
@@ -79,7 +78,7 @@ nav ul li {
    
 }
 
-#myprogressbar {
+ #myprogressbar { /*yeh gaan eko aage peeche krne ke liye h yeh*/
     width: 80vw;
     cursor: pointer;
 }
